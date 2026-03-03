@@ -1,10 +1,30 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/ui/Button";
 import { ArrowRight, Star } from "lucide-react";
 
+const rotatingWords = [
+  "Professionell.",
+  "Modern.",
+  "SEO-optimiert.",
+  "Überzeugend.",
+  "Schnell online.",
+];
+
 export default function Hero() {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  const nextWord = useCallback(() => {
+    setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextWord, 3000);
+    return () => clearInterval(interval);
+  }, [nextWord]);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-white to-primary-light">
       {/* Decorative background pattern */}
@@ -38,7 +58,20 @@ export default function Hero() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary leading-tight tracking-tight">
               Ihre Website.{" "}
-              <span className="text-primary">Professionell.</span>{" "}
+              <span className="text-primary inline-block relative">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={rotatingWords[wordIndex]}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="inline-block"
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>{" "}
               <br className="hidden sm:block" />
               Zum fairen Preis.
             </h1>
