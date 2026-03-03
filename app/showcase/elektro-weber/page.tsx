@@ -676,7 +676,7 @@ export default function ElektroWeberPage() {
             className="inline-flex items-center gap-2 text-sm text-amber-700 hover:text-amber-900 font-medium transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Zurück zur Showcase-Übersicht – Diese Demo wurde mit HandwerkWeb erstellt
+            Zurück zur Showcase-Übersicht – Diese Demo wurde mit MeisterSeite erstellt
           </Link>
         </div>
       </div>

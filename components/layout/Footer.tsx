@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
                 <Hammer className="h-5 w-5" />
               </div>
-              <span className="text-lg font-bold">HandwerkWeb</span>
+              <span className="text-lg font-bold">MeisterSeite</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               Professionelle Websites für Handwerksbetriebe. Modern,
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} HandwerkWeb. Alle Rechte vorbehalten.
+          &copy; {new Date().getFullYear()} MeisterSeite. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

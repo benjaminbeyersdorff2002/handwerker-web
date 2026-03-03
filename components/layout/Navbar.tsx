@@ -38,7 +38,7 @@ export default function Navbar() {
               <Hammer className="h-5 w-5" />
             </div>
             <span className="text-lg font-bold text-secondary">
-              HandwerkWeb
+              MeisterSeite
             </span>
           </Link>
 
