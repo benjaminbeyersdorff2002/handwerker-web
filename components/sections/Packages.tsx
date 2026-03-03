@@ -26,6 +26,11 @@ import {
   Plus,
   Headphones,
   Rocket,
+  QrCode,
+  Nfc,
+  Mail,
+  Share2,
+  Gift,
   type LucideIcon,
 } from "lucide-react";
 
@@ -205,6 +210,68 @@ export default function Packages() {
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {modules.map((mod) => (
             <ModuleCard key={mod.name} {...mod} />
+          ))}
+        </div>
+      </div>
+
+      {/* ── LAUNCH KIT ── */}
+      <div className="mt-20 max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <Gift className="h-4 w-4" />
+            Gratis bei jedem Projekt
+          </div>
+          <h3 className="mt-4 text-xl sm:text-2xl font-bold text-secondary">
+            Ihr Launch-Kit – startklar ab Tag 1
+          </h3>
+          <p className="mt-3 text-muted max-w-xl mx-auto">
+            Jedes Projekt wird mit einem kompletten Marketing-Starterpaket
+            ausgeliefert – ohne Aufpreis.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            {
+              icon: QrCode,
+              title: "QR-Codes für Fahrzeug & Baustelle",
+              text: "Druckfertige Aufkleber für Auto, Baustelle und Visitenkarten – mit Scan-Tracking.",
+            },
+            {
+              icon: Nfc,
+              title: "NFC-Bewertungskarten",
+              text: "5 Karten: Kunde hält Handy dran, landet direkt bei Ihrer Google-Bewertung.",
+            },
+            {
+              icon: Mail,
+              title: "Professionelle E-Mail-Signatur",
+              text: "HTML-Signatur im Website-Design mit Logo, Kontaktdaten und \u201ETermin buchen\u201C-Button.",
+            },
+            {
+              icon: Share2,
+              title: "Social-Media-Vorlagen",
+              text: "5–10 gebrandete Canva-Templates für Instagram & Facebook – Foto rein, posten, fertig.",
+            },
+            {
+              icon: FileText,
+              title: "Gebrandete Angebotsmappe",
+              text: "PDF-Vorlage im Website-Design für Ihre Kundenangebote.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="bg-green-50/50 rounded-xl border border-green-100 p-4 text-center"
+            >
+              <div className="flex h-10 w-10 mx-auto items-center justify-center rounded-lg bg-green-100 text-green-700 mb-3">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <h4 className="font-semibold text-secondary text-sm leading-tight">
+                {item.title}
+              </h4>
+              <p className="mt-2 text-xs text-muted leading-relaxed">
+                {item.text}
+              </p>
+            </div>
           ))}
         </div>
       </div>
