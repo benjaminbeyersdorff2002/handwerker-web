@@ -246,7 +246,7 @@ export default function HaustechnikMuellerPage() {
                 icon: Flame,
                 name: "Heizungsbau",
                 desc: "Installation und Modernisierung von Heizungsanlagen. Gas, Öl, Pellet oder Wärmepumpe – wir beraten Sie neutral.",
-                img: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+                img: "https://images.unsplash.com/photo-1613063457061-eecde6f4b20d?w=600&q=80",
               },
               {
                 icon: Droplets,
@@ -258,7 +258,7 @@ export default function HaustechnikMuellerPage() {
                 icon: Wind,
                 name: "Klimaanlagen",
                 desc: "Split- und Multi-Split-Klimaanlagen für Wohn- und Gewerberäume. Energieeffizient und leise.",
-                img: "https://images.unsplash.com/photo-1631545806609-3c480bba2917?w=600&q=80",
+                img: "https://images.unsplash.com/photo-1624167473693-bb5ea202957f?w=600&q=80",
               },
               {
                 icon: Wrench,

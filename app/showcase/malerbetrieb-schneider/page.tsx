@@ -44,7 +44,7 @@ const services = [
     icon: Droplets,
     name: "Lackierarbeiten",
     desc: "Lackierung von Türen, Fenstern, Heizkörpern und Metalloberflächen – vom Streichen bis zur Sprühlackierung.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?w=600&h=400&fit=crop",
   },
   {
     icon: Palette,
@@ -249,7 +249,7 @@ export default function MalerbetriebSchneiderPage() {
                 <div className="space-y-4 pt-8">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=200&fit=crop"
+                      src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?w=400&h=200&fit=crop"
                       alt="Farbauswahl"
                       width={400}
                       height={200}

@@ -43,7 +43,7 @@ const services = [
     icon: Shield,
     name: "Sicherheitstechnik",
     desc: "Alarmanlagen, Videoüberwachung, Rauchmelder und Zutrittskontrolle – für Ihr sicheres Zuhause.",
-    image: "https://images.unsplash.com/photo-1558002038-bb4237b50b11?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop",
   },
   {
     icon: Zap,
