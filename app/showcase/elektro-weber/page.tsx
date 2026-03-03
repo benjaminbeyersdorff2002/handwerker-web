@@ -19,6 +19,7 @@ import {
   Calendar,
 } from "lucide-react";
 import type { Metadata } from "next";
+import ElektroWeberNavbar from "@/components/showcase/ElektroWeberNavbar";
 
 export const metadata: Metadata = {
   title: "Elektro Weber | Ihr Elektriker-Meisterbetrieb in Mittelhessen",
@@ -116,18 +117,10 @@ const reviews = [
 export default function ElektroWeberPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Demo Banner */}
-      <div className="bg-amber-50 border-b border-amber-200 py-2 text-center text-sm mt-16 md:mt-20">
-        <span className="text-amber-800">
-          Dies ist eine <strong>Demo-Website</strong> – erstellt in 5 Tagen als Showcase.{" "}
-          <Link href="/showcase" className="underline hover:no-underline font-medium">
-            Alle Demos ansehen
-          </Link>
-        </span>
-      </div>
+      <ElektroWeberNavbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative text-white overflow-hidden min-h-[600px] flex items-center">
+      <section className="relative text-white overflow-hidden min-h-[100vh] flex items-center pt-24">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=1080&fit=crop&q=80"
@@ -242,7 +235,7 @@ export default function ElektroWeberPage() {
       </section>
 
       {/* ─── ÜBER UNS ─── */}
-      <section className="py-20 md:py-28">
+      <section id="ueber-uns" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
@@ -347,7 +340,7 @@ export default function ElektroWeberPage() {
       </section>
 
       {/* ─── REFERENZPROJEKTE ─── */}
-      <section className="py-20 md:py-28">
+      <section id="referenzen" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">

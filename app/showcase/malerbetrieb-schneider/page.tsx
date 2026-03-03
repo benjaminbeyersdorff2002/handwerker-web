@@ -20,6 +20,7 @@ import {
   Heart,
 } from "lucide-react";
 import type { Metadata } from "next";
+import MalerSchneiderNavbar from "@/components/showcase/MalerSchneiderNavbar";
 
 export const metadata: Metadata = {
   title: "Malerbetrieb Schneider | Maler & Lackierer in Herborn",
@@ -141,18 +142,10 @@ const reviews = [
 export default function MalerbetriebSchneiderPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Demo Banner */}
-      <div className="bg-amber-50 border-b border-amber-200 py-2 text-center text-sm mt-16 md:mt-20">
-        <span className="text-amber-800">
-          Dies ist eine <strong>Demo-Website</strong> – erstellt in 7 Tagen als Showcase.{" "}
-          <Link href="/showcase" className="underline hover:no-underline font-medium">
-            Alle Demos ansehen
-          </Link>
-        </span>
-      </div>
+      <MalerSchneiderNavbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative text-white overflow-hidden min-h-[600px] flex items-center">
+      <section className="relative text-white overflow-hidden min-h-[100vh] flex items-center pt-24">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&h=1080&fit=crop&q=80"
@@ -275,7 +268,7 @@ export default function MalerbetriebSchneiderPage() {
       </section>
 
       {/* ─── ÜBER UNS ─── */}
-      <section className="py-20 md:py-28">
+      <section id="ueber-uns" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
@@ -424,7 +417,7 @@ export default function MalerbetriebSchneiderPage() {
       </section>
 
       {/* ─── REFERENZPROJEKTE ─── */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section id="referenzen" className="py-20 md:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">

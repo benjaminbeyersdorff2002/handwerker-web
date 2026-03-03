@@ -20,6 +20,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 import type { Metadata } from "next";
+import HaustechnikMuellerNavbar from "@/components/showcase/HaustechnikMuellerNavbar";
 
 export const metadata: Metadata = {
   title: "Haustechnik Müller | Sanitär, Heizung & Klima in Haiger",
@@ -30,8 +31,10 @@ export const metadata: Metadata = {
 export default function HaustechnikMuellerPage() {
   return (
     <div className="min-h-screen bg-white">
+      <HaustechnikMuellerNavbar />
+
       {/* ===================== HERO ===================== */}
-      <section className="relative min-h-[90vh] flex items-center mt-16 md:mt-20 overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center pt-24 overflow-hidden">
         {/* Background Image */}
         <Image
           src="https://images.unsplash.com/photo-1585128792020-803d29415281?w=1920&q=80"
@@ -155,7 +158,7 @@ export default function HaustechnikMuellerPage() {
       </section>
 
       {/* ===================== ÜBER UNS ===================== */}
-      <section className="py-20 md:py-28">
+      <section id="ueber-uns" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
@@ -304,7 +307,7 @@ export default function HaustechnikMuellerPage() {
       </section>
 
       {/* ===================== REFERENZPROJEKTE ===================== */}
-      <section className="py-20 md:py-28">
+      <section id="referenzen" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">
