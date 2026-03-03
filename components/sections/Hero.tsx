@@ -84,8 +84,8 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button href="#pakete" size="lg">
-                Pakete ansehen
+              <Button href="#preise" size="lg">
+                Preise ansehen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button href="#showcase" variant="outline" size="lg">

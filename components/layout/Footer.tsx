@@ -28,8 +28,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#pakete" className="hover:text-primary transition-colors">
-                  Pakete & Preise
+                <a href="#preise" className="hover:text-primary transition-colors">
+                  Preise
                 </a>
               </li>
               <li>

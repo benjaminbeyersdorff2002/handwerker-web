@@ -122,10 +122,10 @@ function ModuleCard({
 /* ── Main Component ── */
 export default function Packages() {
   return (
-    <SectionWrapper id="pakete">
+    <SectionWrapper id="preise">
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-          Pakete & Preise
+          Preise
         </span>
         <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-secondary">
           Eine vollständige Website. Ein fairer Preis.
