@@ -3,7 +3,7 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { Check, X } from "lucide-react";
+import { Check, X, Percent } from "lucide-react";
 
 type Feature = {
   name: string;
@@ -26,7 +26,8 @@ const features: Feature[] = [
 const packages = [
   {
     name: "Starter",
-    price: "799",
+    originalPrice: "799",
+    price: "319",
     pages: "1–3 Seiten (OnePager)",
     delivery: "5–7 Werktage",
     highlighted: false,
@@ -34,7 +35,8 @@ const packages = [
   },
   {
     name: "Professional",
-    price: "1.499",
+    originalPrice: "1.499",
+    price: "599",
     pages: "5–7 Seiten",
     delivery: "7–10 Werktage",
     highlighted: true,
@@ -42,7 +44,8 @@ const packages = [
   },
   {
     name: "Premium",
-    price: "2.499",
+    originalPrice: "2.499",
+    price: "999",
     pages: "8–12+ Seiten",
     delivery: "10–14 Werktage",
     highlighted: false,
@@ -64,6 +67,12 @@ export default function Packages() {
           Wählen Sie das Paket, das zu Ihrem Betrieb passt. Alle Preise sind
           Festpreise – ohne versteckte Kosten.
         </p>
+
+        {/* Launch Discount Banner */}
+        <div className="mt-8 inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 px-5 py-2.5 rounded-full text-sm font-semibold">
+          <Percent className="h-4 w-4" />
+          Launch-Angebot: <span className="font-extrabold">60 % Rabatt</span> auf alle Pakete
+        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -78,8 +87,18 @@ export default function Packages() {
             )}
             <h3 className="text-xl font-bold text-secondary">{pkg.name}</h3>
             <div className="mt-4">
-              <span className="text-4xl font-extrabold text-secondary">{pkg.price}</span>
-              <span className="text-muted ml-1">€</span>
+              <div className="flex items-baseline gap-2">
+                <span className="text-lg text-gray-400 line-through font-medium">
+                  {pkg.originalPrice} €
+                </span>
+                <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">
+                  –60 %
+                </span>
+              </div>
+              <div className="mt-1">
+                <span className="text-4xl font-extrabold text-secondary">{pkg.price}</span>
+                <span className="text-muted ml-1">€</span>
+              </div>
             </div>
             <p className="text-sm text-muted mt-2">{pkg.pages}</p>
             <p className="text-sm text-primary font-medium mt-1">
