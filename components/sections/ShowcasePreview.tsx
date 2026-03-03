@@ -3,6 +3,7 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Zap, Paintbrush, Flame } from "lucide-react";
 
 const showcases = [
@@ -10,28 +11,37 @@ const showcases = [
     slug: "elektro-weber",
     name: "Elektro Weber",
     trade: "Elektrikerbetrieb",
-    description: "Moderne Website für einen Elektro-Meisterbetrieb mit 24h-Notdienst und Online-Terminbuchung.",
+    description:
+      "Moderne Website mit 24h-Notdienst, Referenzprojekten, Kundenbewertungen und vollständigem Kontaktbereich.",
     icon: Zap,
-    gradient: "from-blue-500 to-blue-700",
+    gradient: "from-blue-600 to-blue-800",
     accentColor: "bg-blue-500",
+    image:
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80",
   },
   {
     slug: "malerbetrieb-schneider",
     name: "Malerbetrieb Schneider",
     trade: "Maler & Lackierer",
-    description: "Farbenfrohe Website mit Vorher/Nachher-Galerie und Referenzprojekten.",
+    description:
+      "Farbenfrohe Website mit Vorher/Nachher-Galerie, Referenzprojekten und professionellem Farbkonzept.",
     icon: Paintbrush,
-    gradient: "from-emerald-500 to-emerald-700",
+    gradient: "from-emerald-600 to-emerald-800",
     accentColor: "bg-emerald-500",
+    image:
+      "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80",
   },
   {
     slug: "haustechnik-mueller",
     name: "Haustechnik Müller",
     trade: "Sanitär, Heizung & Klima",
-    description: "Professioneller Auftritt für einen SHK-Betrieb mit Notdienst-Integration.",
+    description:
+      "Professioneller SHK-Auftritt mit Notdienst-Integration, Leistungsübersicht und Kundenstimmen.",
     icon: Flame,
-    gradient: "from-red-500 to-red-700",
+    gradient: "from-red-600 to-red-800",
     accentColor: "bg-red-500",
+    image:
+      "https://images.unsplash.com/photo-1585128792020-803d29415281?w=600&q=80",
   },
 ];
 
@@ -59,25 +69,37 @@ export default function ShowcasePreview() {
             className="group block"
           >
             <div className="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              {/* Preview header */}
-              <div
-                className={`h-48 bg-gradient-to-br ${showcase.gradient} flex items-center justify-center relative`}
-              >
-                <div className="text-center text-white">
-                  <showcase.icon className="h-12 w-12 mx-auto mb-3 opacity-90" />
-                  <span className="font-bold text-xl">{showcase.name}</span>
-                </div>
+              {/* Preview Image */}
+              <div className="relative h-52 overflow-hidden">
+                <Image
+                  src={showcase.image}
+                  alt={`${showcase.name} Demo-Website`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${showcase.gradient} opacity-60`}
+                />
                 {/* Browser dots */}
                 <div className="absolute top-3 left-3 flex gap-1.5">
-                  <div className="h-2.5 w-2.5 rounded-full bg-white/30" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-white/30" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-white/30" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-white/40" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-white/40" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-white/40" />
+                </div>
+                {/* Name Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center gap-2 text-white">
+                    <showcase.icon className="h-5 w-5" />
+                    <span className="font-bold text-lg">{showcase.name}</span>
+                  </div>
                 </div>
               </div>
 
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className={`h-2 w-2 rounded-full ${showcase.accentColor}`} />
+                  <div
+                    className={`h-2 w-2 rounded-full ${showcase.accentColor}`}
+                  />
                   <span className="text-xs font-medium text-muted uppercase tracking-wide">
                     {showcase.trade}
                   </span>
