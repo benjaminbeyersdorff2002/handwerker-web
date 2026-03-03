@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { ArrowRight, Star } from "lucide-react";
 
@@ -114,7 +115,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="hidden lg:block"
           >
-            {/* Hero illustration - Browser mockup */}
+            {/* Hero illustration - Browser mockup with real screenshot */}
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
                 {/* Browser chrome */}
@@ -126,32 +127,19 @@ export default function Hero() {
                   </div>
                   <div className="flex-1 mx-4">
                     <div className="bg-white rounded-md px-3 py-1.5 text-xs text-muted border border-gray-200">
-                      www.ihr-handwerksbetrieb.de
+                      www.elektro-weber.de
                     </div>
                   </div>
                 </div>
-                {/* Mock website content */}
-                <div className="p-6 space-y-4">
-                  <div className="h-32 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">Elektro Weber</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-gray-200 rounded w-3/4" />
-                    <div className="h-3 bg-gray-200 rounded w-full" />
-                    <div className="h-3 bg-gray-200 rounded w-2/3" />
-                  </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="h-16 rounded-lg bg-gray-100 flex items-center justify-center">
-                      <div className="h-6 w-6 rounded-full bg-primary/30" />
-                    </div>
-                    <div className="h-16 rounded-lg bg-gray-100 flex items-center justify-center">
-                      <div className="h-6 w-6 rounded-full bg-primary/30" />
-                    </div>
-                    <div className="h-16 rounded-lg bg-gray-100 flex items-center justify-center">
-                      <div className="h-6 w-6 rounded-full bg-primary/30" />
-                    </div>
-                  </div>
-                </div>
+                {/* Real showcase screenshot */}
+                <Image
+                  src="/images/showcase-hero.png"
+                  alt="Beispiel-Website: Elektro Weber – erstellt von HandwerkWeb"
+                  width={1280}
+                  height={800}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-primary text-white px-4 py-2 rounded-xl shadow-lg text-sm font-semibold">
