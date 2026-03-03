@@ -1,26 +1,32 @@
 "use client";
 
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { Star } from "lucide-react";
+import { MessageSquare, Clock, Rocket } from "lucide-react";
 
-const testimonials = [
+const steps = [
   {
-    name: "Thomas K.",
-    role: "Elektro-Meisterbetrieb",
-    text: "Endlich eine Website, die wirklich zu meinem Betrieb passt. In nur einer Woche war alles online – und ich bekomme seitdem mehr Anfragen über Google.",
-    stars: 5,
+    icon: MessageSquare,
+    number: "1",
+    title: "Kostenloses Erstgespräch",
+    description:
+      "30 Minuten, in denen wir Ihren Bedarf klären. Persönlich, telefonisch oder per Video – wie es Ihnen passt.",
+    highlight: "Unverbindlich & kostenlos",
   },
   {
-    name: "Sandra M.",
-    role: "Malerbetrieb",
-    text: "Ich hatte vorher eine uralte Website, die auf dem Handy nicht funktioniert hat. Jetzt sieht alles super aus und meine Kunden finden mich endlich im Internet.",
-    stars: 5,
+    icon: Clock,
+    number: "2",
+    title: "Entwurf in 48 Stunden",
+    description:
+      "Sie erhalten einen ersten Entwurf Ihrer Website innerhalb von zwei Werktagen – bevor Sie einen Cent bezahlen.",
+    highlight: "Kein Risiko für Sie",
   },
   {
-    name: "Markus W.",
-    role: "SHK-Betrieb",
-    text: "Faire Preise, schnelle Umsetzung und ein super netter Kontakt. Kann ich jedem Handwerkskollegen nur empfehlen!",
-    stars: 5,
+    icon: Rocket,
+    number: "3",
+    title: "Website online in 7 Tagen",
+    description:
+      "Nach Ihrer Freigabe geht Ihre fertige Website innerhalb einer Woche live. Inklusive Hosting, Domain und SSL.",
+    highlight: "Schneller geht's nicht",
   },
 ];
 
@@ -29,45 +35,43 @@ export default function Testimonials() {
     <SectionWrapper>
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-          Kundenstimmen
+          So arbeiten wir
         </span>
         <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-secondary">
-          Das sagen unsere Kunden
+          Vom Gespräch zur fertigen Website – in 7 Tagen
         </h2>
-        <p className="mt-4 text-sm text-muted">
-          (Platzhalter – wird durch echte Kundenbewertungen ersetzt)
+        <p className="mt-4 text-muted max-w-2xl mx-auto text-lg">
+          Kein komplizierter Prozess, keine langen Wartezeiten. Drei Schritte –
+          und Ihr Betrieb ist online.
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial) => (
+        {steps.map((step) => (
           <div
-            key={testimonial.name}
-            className="bg-white rounded-2xl p-6 border border-gray-100 shadow-md"
+            key={step.number}
+            className="bg-white rounded-2xl p-6 border border-gray-100 shadow-md relative"
           >
-            <div className="flex gap-0.5 mb-4">
-              {Array.from({ length: testimonial.stars }).map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 text-primary fill-primary"
-                />
-              ))}
-            </div>
-            <p className="text-muted leading-relaxed text-sm italic">
-              &ldquo;{testimonial.text}&rdquo;
-            </p>
-            <div className="mt-4 pt-4 border-t border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold text-secondary text-sm">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-xs text-muted">{testimonial.role}</p>
-                </div>
+            {/* Step number */}
+            <div className="flex items-center gap-3 mb-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <step.icon className="h-6 w-6" />
               </div>
+              <span className="text-4xl font-extrabold text-primary/15">
+                {step.number}
+              </span>
+            </div>
+
+            <h3 className="text-lg font-bold text-secondary">{step.title}</h3>
+
+            <p className="mt-3 text-muted leading-relaxed text-sm">
+              {step.description}
+            </p>
+
+            <div className="mt-5 pt-4 border-t border-gray-100">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                {step.highlight}
+              </span>
             </div>
           </div>
         ))}
