@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Was kostet mich das insgesamt?",
     answer:
-      "Sie zahlen einmalig den Festpreis des gewählten Pakets (ab 799 €). Keine versteckten Kosten. Optional können Sie einen Wartungsvertrag ab 29 €/Monat für Hosting und Updates dazubuchen.",
+      "Sie zahlen einmalig den Festpreis für Ihr Basispaket (ab 999 €) plus nur die Module, die Sie wirklich brauchen. Keine versteckten Kosten, keine unnötigen Features. Optional können Sie einen Wartungsvertrag ab 29 €/Monat für Hosting und Updates dazubuchen.",
   },
   {
     question: "Wie lange dauert es, bis meine Website fertig ist?",

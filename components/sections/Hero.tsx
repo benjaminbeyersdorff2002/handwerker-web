@@ -46,7 +46,7 @@ export default function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-muted max-w-xl leading-relaxed">
               Moderne, SEO-optimierte Websites für Handwerksbetriebe –
               geliefert in 1–2 Wochen. Keine versteckten Kosten, kein
-              Technik-Stress. Ab 799 €.
+              Technik-Stress. Ab 999 €.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
