@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Muss ich mich um die Technik kümmern?",
     answer:
-      "Nein. Wir übernehmen Hosting, Domain-Einrichtung, SSL-Zertifikat und laufende Updates. Sie müssen sich um nichts kümmern – außer um Ihre Kunden.",
+      "Nein. Mit unserem Wartungspaket (ab 29 €/Monat) übernehmen wir Hosting, SSL, Sicherheitsupdates und Backups. Keine Vertragsbindung, monatlich kündbar. Sie müssen sich um nichts kümmern – außer um Ihre Kunden.",
   },
   {
     question: "Kann ich die Website später selbst bearbeiten?",

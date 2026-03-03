@@ -24,6 +24,8 @@ import {
   BarChart3,
   Package,
   Plus,
+  Headphones,
+  Rocket,
   type LucideIcon,
 } from "lucide-react";
 
@@ -205,6 +207,101 @@ export default function Packages() {
             <ModuleCard key={mod.name} {...mod} />
           ))}
         </div>
+      </div>
+
+      {/* ── HOSTING & MAINTENANCE ── */}
+      <div className="mt-20 max-w-4xl mx-auto">
+        <div className="text-center mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-secondary">
+            Nach dem Launch: Hosting & Wartung
+          </h3>
+          <p className="mt-2 text-muted max-w-lg mx-auto">
+            Optional, aber empfohlen. Damit Ihre Website sicher bleibt und Sie
+            sich um nichts kümmern müssen.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          {/* Basis */}
+          <div className="bg-white rounded-xl border border-gray-100 p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary/5 text-secondary">
+                <Headphones className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-bold text-secondary">Basis</h4>
+                <p className="text-xs text-muted">Das Wichtigste abgedeckt</p>
+              </div>
+            </div>
+            <ul className="space-y-2.5 mb-6">
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Hosting & Domain-Verwaltung
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                SSL-Zertifikat & Sicherheitsupdates
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Technischer Support per E-Mail
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Monatliches Backup
+              </li>
+            </ul>
+            <div className="pt-4 border-t border-gray-100">
+              <span className="text-3xl font-extrabold text-secondary">29</span>
+              <span className="text-muted ml-1">€/Monat</span>
+            </div>
+          </div>
+
+          {/* Rundum-Sorglos */}
+          <div className="bg-white rounded-xl border-2 border-primary/20 p-6 relative">
+            <div className="absolute -top-3 right-4">
+              <span className="bg-primary text-white text-xs font-bold uppercase px-2.5 py-1 rounded-full">
+                Empfohlen
+              </span>
+            </div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Rocket className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-bold text-secondary">Rundum-Sorglos</h4>
+                <p className="text-xs text-muted">Alles aus Basis, plus:</p>
+              </div>
+            </div>
+            <ul className="space-y-2.5 mb-6">
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Alles aus dem Basis-Paket
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Monatliche Content-Änderungen
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                SEO-Monitoring & Performance-Checks
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Prioritäts-Support per Telefon
+              </li>
+            </ul>
+            <div className="pt-4 border-t border-gray-100">
+              <span className="text-3xl font-extrabold text-secondary">49</span>
+              <span className="text-muted ml-1">€/Monat</span>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-center text-sm text-muted mt-6">
+          Keine Vertragsbindung – monatlich kündbar. Faire Konditionen, wie Sie
+          es von einem Handwerker erwarten würden.
+        </p>
       </div>
     </SectionWrapper>
   );
