@@ -3,53 +3,79 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { Check, X, Percent } from "lucide-react";
-
-type Feature = {
-  name: string;
-  starter: boolean;
-  professional: boolean;
-  premium: boolean;
-};
-
-const features: Feature[] = [
-  { name: "Responsives Design", starter: true, professional: true, premium: true },
-  { name: "SEO-Grundoptimierung", starter: true, professional: true, premium: true },
-  { name: "Kontaktformular", starter: true, professional: true, premium: true },
-  { name: "Google Maps Integration", starter: false, professional: true, premium: true },
-  { name: "Bildergalerie / Referenzen", starter: false, professional: true, premium: true },
-  { name: "Google My Business Setup", starter: false, professional: true, premium: true },
-  { name: "Online-Terminbuchung", starter: false, professional: false, premium: true },
-  { name: "Blog / News-Bereich", starter: false, professional: false, premium: true },
-];
+import {
+  Check,
+  PhoneCall,
+  MapPin,
+  FileText,
+  Search,
+  ShieldCheck,
+  Lock,
+  ImageIcon,
+  Star,
+  Briefcase,
+  Globe,
+  Award,
+  CalendarCheck,
+  AlertCircle,
+  HelpCircle,
+  Users,
+  Newspaper,
+  BarChart3,
+} from "lucide-react";
 
 const packages = [
   {
-    name: "Starter",
-    originalPrice: "799",
-    price: "319",
-    pages: "1–3 Seiten (OnePager)",
+    name: "Visitenkarte",
+    tagline: "Online sichtbar werden",
+    price: "799",
+    target: "Für Betriebe, die erstmals online gehen oder einen sauberen Auftritt brauchen.",
     delivery: "5–7 Werktage",
     highlighted: false,
-    key: "starter" as const,
+    features: [
+      { icon: Globe, text: "Responsive Website (alle Geräte)" },
+      { icon: PhoneCall, text: "Click-to-Call & WhatsApp-Button" },
+      { icon: MapPin, text: "Google Maps Einbindung" },
+      { icon: FileText, text: "Kontaktformular" },
+      { icon: Briefcase, text: "Leistungsübersicht" },
+      { icon: Search, text: "SEO-Grundoptimierung" },
+      { icon: Lock, text: "SSL-Zertifikat & Hosting-Setup" },
+    ],
+    previousTier: null,
   },
   {
-    name: "Professional",
-    originalPrice: "1.499",
-    price: "599",
-    pages: "5–7 Seiten",
+    name: "Kundenmagnet",
+    tagline: "Mehr Anfragen gewinnen",
+    price: "1.499",
+    target: "Für wachsende Betriebe, die online Kunden überzeugen wollen.",
     delivery: "7–10 Werktage",
     highlighted: true,
-    key: "professional" as const,
+    features: [
+      { icon: ImageIcon, text: "Vorher/Nachher-Galerie" },
+      { icon: Star, text: "Google-Bewertungen Integration" },
+      { icon: ShieldCheck, text: "Google My Business Setup" },
+      { icon: Briefcase, text: "Referenzprojekte-Bereich" },
+      { icon: MapPin, text: "Leistungsgebiet mit lokaler SEO" },
+      { icon: Award, text: "Trust-Elemente (Meisterbrief, Innung)" },
+    ],
+    previousTier: "Visitenkarte",
   },
   {
-    name: "Premium",
-    originalPrice: "2.499",
-    price: "999",
-    pages: "8–12+ Seiten",
+    name: "Komplettpaket",
+    tagline: "Ihr Gebiet dominieren",
+    price: "2.499",
+    target: "Für Betriebe, die aktiv wachsen und die Region anführen wollen.",
     delivery: "10–14 Werktage",
     highlighted: false,
-    key: "premium" as const,
+    features: [
+      { icon: CalendarCheck, text: "Online-Terminbuchung" },
+      { icon: AlertCircle, text: "Notdienst-Feature (Banner/Badge)" },
+      { icon: HelpCircle, text: "FAQ-Bereich (SEO-Boost)" },
+      { icon: Users, text: "Mitarbeiter-/Team-Seite" },
+      { icon: Newspaper, text: "Blog/News-Bereich" },
+      { icon: BarChart3, text: "Google Ads Optimierung" },
+    ],
+    previousTier: "Kundenmagnet",
   },
 ];
 
@@ -64,20 +90,18 @@ export default function Packages() {
           Transparente Festpreise. Keine Überraschungen.
         </h2>
         <p className="mt-4 text-muted max-w-2xl mx-auto text-lg">
-          Wählen Sie das Paket, das zu Ihrem Betrieb passt. Alle Preise sind
-          Festpreise – ohne versteckte Kosten.
+          Wählen Sie das Paket, das zu Ihrem Geschäftsziel passt. Alle Preise
+          sind Festpreise – ohne versteckte Kosten.
         </p>
-
-        {/* Launch Discount Banner */}
-        <div className="mt-8 inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 px-5 py-2.5 rounded-full text-sm font-semibold">
-          <Percent className="h-4 w-4" />
-          Launch-Angebot: <span className="font-extrabold">60 % Rabatt</span> auf alle Pakete
-        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
         {packages.map((pkg) => (
-          <Card key={pkg.name} highlighted={pkg.highlighted} className="flex flex-col">
+          <Card
+            key={pkg.name}
+            highlighted={pkg.highlighted}
+            className="flex flex-col"
+          >
             {pkg.highlighted && (
               <div className="text-center -mt-2 mb-4">
                 <span className="bg-primary text-white text-xs font-bold uppercase px-3 py-1 rounded-full">
@@ -85,46 +109,48 @@ export default function Packages() {
                 </span>
               </div>
             )}
+
+            {/* Package Name & Tagline */}
             <h3 className="text-xl font-bold text-secondary">{pkg.name}</h3>
-            <div className="mt-4">
-              <div className="flex items-baseline gap-2">
-                <span className="text-lg text-gray-400 line-through font-medium">
-                  {pkg.originalPrice} €
-                </span>
-                <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">
-                  –60 %
-                </span>
-              </div>
-              <div className="mt-1">
-                <span className="text-4xl font-extrabold text-secondary">{pkg.price}</span>
-                <span className="text-muted ml-1">€</span>
-              </div>
-            </div>
-            <p className="text-sm text-muted mt-2">{pkg.pages}</p>
             <p className="text-sm text-primary font-medium mt-1">
+              {pkg.tagline}
+            </p>
+
+            {/* Price */}
+            <div className="mt-4">
+              <span className="text-4xl font-extrabold text-secondary">
+                {pkg.price}
+              </span>
+              <span className="text-muted ml-1">€</span>
+            </div>
+
+            {/* Target */}
+            <p className="text-sm text-muted mt-3 leading-relaxed">
+              {pkg.target}
+            </p>
+            <p className="text-xs text-primary font-medium mt-2">
               Lieferzeit: {pkg.delivery}
             </p>
 
-            <ul className="mt-6 space-y-3 flex-1">
-              {features.map((feature) => {
-                const included = feature[pkg.key];
-                return (
+            {/* Features */}
+            <div className="mt-6 flex-1">
+              {pkg.previousTier && (
+                <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3 pb-3 border-b border-gray-100">
+                  Alles aus {pkg.previousTier}, plus:
+                </p>
+              )}
+              <ul className="space-y-3">
+                {pkg.features.map((feature) => (
                   <li
-                    key={feature.name}
-                    className={`flex items-center gap-2 text-sm ${
-                      included ? "text-secondary" : "text-gray-300"
-                    }`}
+                    key={feature.text}
+                    className="flex items-start gap-2.5 text-sm text-secondary"
                   >
-                    {included ? (
-                      <Check className="h-4 w-4 text-green-500 shrink-0" />
-                    ) : (
-                      <X className="h-4 w-4 text-gray-300 shrink-0" />
-                    )}
-                    {feature.name}
+                    <feature.icon className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                    {feature.text}
                   </li>
-                );
-              })}
-            </ul>
+                ))}
+              </ul>
+            </div>
 
             <div className="mt-8">
               <Button
