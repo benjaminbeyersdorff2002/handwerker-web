@@ -32,7 +32,7 @@ const steps = [
 
 export default function Testimonials() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="ablauf">
       <div className="text-center mb-16">
         <span className="text-primary font-semibold text-sm uppercase tracking-wider">
           So arbeiten wir

@@ -53,7 +53,7 @@ export default function Hero() {
             <div className="flex items-center gap-2 mb-6">
               <div className="flex items-center gap-1 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-medium">
                 <Star className="h-4 w-4 fill-primary" />
-                <span>AI-gestützte Webentwicklung</span>
+                <span>Spezialisiert auf Handwerksbetriebe</span>
               </div>
             </div>
 

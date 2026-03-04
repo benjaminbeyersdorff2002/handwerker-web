@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Wie lange dauert es, bis meine Website fertig ist?",
     answer:
-      "Je nach Paket zwischen 5 und 14 Werktagen. Beim Starter-Paket kann Ihre Website schon in einer Woche online sein. Wir brauchen von Ihnen nur ein 30-minütiges Erstgespräch und ein paar Fotos.",
+      "In der Regel ist Ihre Website innerhalb von 5–7 Werktagen online. Sie brauchen uns nur ein 30-minütiges Erstgespräch und ein paar Fotos liefern – den Rest erledigen wir.",
   },
   {
     question: "Ich kenne jemanden, der das günstiger macht.",

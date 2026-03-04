@@ -71,7 +71,7 @@ const modules = [
   {
     icon: CalendarCheck,
     name: "Online-Terminbuchung",
-    price: 199,
+    price: 149,
     description:
       "Kunden buchen Termine direkt auf Ihrer Website – nahtlos integriert mit Cal.com oder Calendly, inkl. Einrichtung und Einweisung.",
     effort: "Drittanbieter-Integration & Konfiguration",
