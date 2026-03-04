@@ -134,7 +134,7 @@ export default function Hero() {
                 {/* Real showcase screenshot */}
                 <Image
                   src="/images/showcase-hero.png"
-                  alt="Beispiel-Website: Elektro Weber – erstellt von MeisterSeite"
+                  alt="Beispiel-Website: Elektro Weber – erstellt von CraftBridge"
                   width={1280}
                   height={800}
                   className="w-full h-auto"

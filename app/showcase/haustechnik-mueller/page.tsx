@@ -800,7 +800,7 @@ export default function HaustechnikMuellerPage() {
           className="inline-flex items-center gap-2 text-sm text-white hover:text-red-100 transition-colors font-medium"
         >
           <ArrowLeft className="h-4 w-4" />
-          Zurück zur Showcase-Übersicht – Diese Demo wurde mit MeisterSeite
+          Zurück zur Showcase-Übersicht – Diese Demo wurde mit CraftBridge
           erstellt
         </Link>
       </div>

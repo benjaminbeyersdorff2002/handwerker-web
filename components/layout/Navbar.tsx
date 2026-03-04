@@ -37,8 +37,9 @@ export default function Navbar() {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
               <Hammer className="h-5 w-5" />
             </div>
-            <span className="text-lg font-bold text-secondary">
-              MeisterSeite
+            <span className="text-lg font-bold">
+              <span className="text-primary">Craft</span>
+              <span className="text-secondary">Bridge</span>
             </span>
           </Link>
 

@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Webentwicklung für Handwerksbetriebe | Professionelle Websites zum Festpreis",
+  title: "CraftBridge | Professionelle Websites für Handwerksbetriebe zum Festpreis",
   description:
-    "Moderne, SEO-optimierte Websites für Handwerksbetriebe. Agentur-Qualität zum fairen Preis – geliefert in 1–2 Wochen. Starter ab 799 €.",
+    "Moderne, SEO-optimierte Websites für Handwerksbetriebe. Agentur-Qualität zum fairen Preis – geliefert in 1–2 Wochen. Ab 999 €.",
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | MeisterSeite",
+  title: "Impressum | CraftBridge",
 };
 
 export default function ImpressumPage() {

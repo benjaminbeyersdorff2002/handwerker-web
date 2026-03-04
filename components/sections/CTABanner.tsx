@@ -25,7 +25,7 @@ export default function CTABanner() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                href="mailto:info@meisterseite.de"
+                href="mailto:info@craftbridge.de"
                 variant="primary"
                 size="lg"
               >

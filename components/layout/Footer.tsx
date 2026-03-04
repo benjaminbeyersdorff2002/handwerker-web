@@ -11,7 +11,10 @@ export default function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
                 <Hammer className="h-5 w-5" />
               </div>
-              <span className="text-lg font-bold">MeisterSeite</span>
+              <span className="text-lg font-bold">
+                <span className="text-primary">Craft</span>
+                <span className="text-white">Bridge</span>
+              </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               Professionelle Websites für Handwerksbetriebe. Modern,
@@ -50,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@meisterseite.de</span>
+                <span>info@craftbridge.de</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
@@ -81,7 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} MeisterSeite. Alle Rechte vorbehalten.
+          &copy; {new Date().getFullYear()} CraftBridge. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

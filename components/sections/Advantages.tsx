@@ -136,7 +136,7 @@ export default function Advantages() {
                   <span className="text-sm font-semibold">Ihre Investition</span>
                 </div>
                 <p className="text-sm text-muted leading-relaxed">
-                  Eine MeisterSeite-Website kostet{" "}
+                  Eine CraftBridge-Website kostet{" "}
                   <span className="font-bold text-green-700">einmalig 999 €</span>{" "}
                   – das entspricht{" "}
                   <span className="font-bold text-green-700">
