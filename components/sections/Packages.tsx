@@ -305,7 +305,7 @@ export default function Packages() {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                Support per E-Mail (bis 2 Anfragen/Monat)
+                Support per E-Mail
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
@@ -344,7 +344,7 @@ export default function Packages() {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                Content-Pflege (bis 1 Stunde/Monat)
+                Content-Pflege
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
