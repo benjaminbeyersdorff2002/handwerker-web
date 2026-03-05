@@ -311,7 +311,7 @@ export default function Packages() {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                Technischer Support per E-Mail
+                Support per E-Mail (bis 2 Anfragen/Monat)
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
@@ -319,8 +319,11 @@ export default function Packages() {
               </li>
             </ul>
             <div className="pt-4 border-t border-gray-100">
-              <span className="text-3xl font-extrabold text-secondary">29</span>
+              <span className="text-3xl font-extrabold text-secondary">39</span>
               <span className="text-muted ml-1">€/Monat</span>
+              <p className="text-xs text-muted mt-1">
+                Jährliche Zahlung: 390 €/Jahr (2 Monate gratis)
+              </p>
             </div>
           </div>
 
@@ -347,20 +350,27 @@ export default function Packages() {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                Monatliche Content-Änderungen
+                Content-Pflege (bis 1 Stunde/Monat)
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                SEO-Monitoring & Performance-Checks
+                SEO-Monitoring & monatlicher Report
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary">
                 <Check className="h-4 w-4 text-primary shrink-0" />
-                Prioritäts-Support per Telefon
+                Prioritäts-Support per Telefon & WhatsApp
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary">
+                <Check className="h-4 w-4 text-primary shrink-0" />
+                Google-Bewertungs-Check (Benachrichtigung bei neuen Reviews)
               </li>
             </ul>
             <div className="pt-4 border-t border-gray-100">
-              <span className="text-3xl font-extrabold text-secondary">49</span>
+              <span className="text-3xl font-extrabold text-secondary">69</span>
               <span className="text-muted ml-1">€/Monat</span>
+              <p className="text-xs text-muted mt-1">
+                Jährliche Zahlung: 690 €/Jahr (2 Monate gratis)
+              </p>
             </div>
           </div>
         </div>
