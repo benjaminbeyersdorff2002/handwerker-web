@@ -2,25 +2,37 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Paintbrush, Phone, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Paintbrush, Phone, Menu, X, Palette } from "lucide-react";
+
+const base = "/showcase/malerbetrieb-schneider";
 
 const navLinks = [
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Über uns", href: "#ueber-uns" },
-  { label: "Galerie", href: "#galerie" },
-  { label: "Referenzen", href: "#referenzen" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Leistungen", href: `${base}/leistungen` },
+  { label: "Galerie", href: `${base}/galerie` },
+  { label: "Farbwelt", href: `${base}/farbwelt`, highlight: true },
+  { label: "Über uns", href: `${base}/ueber-uns` },
+  { label: "Kontakt", href: `${base}/kontakt` },
 ];
 
 export default function MalerSchneiderNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  const isActive = (href: string) =>
+    pathname === href || (href !== base && pathname.startsWith(href));
 
   return (
     <nav
@@ -31,8 +43,12 @@ export default function MalerSchneiderNavbar() {
       {/* Demo Banner */}
       <div className="bg-amber-50 border-b border-amber-200 py-1.5 text-center text-xs">
         <span className="text-amber-800">
-          Dies ist eine <strong>Demo-Website</strong> – erstellt als Showcase.{" "}
-          <Link href="/showcase" className="underline hover:no-underline font-medium">
+          Dies ist eine <strong>Demo-Website</strong> – erstellt als
+          Showcase.{" "}
+          <Link
+            href="/showcase"
+            className="underline hover:no-underline font-medium"
+          >
             Alle Demos ansehen
           </Link>
         </span>
@@ -41,7 +57,7 @@ export default function MalerSchneiderNavbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-18 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5">
+          <Link href={base} className="flex items-center gap-2.5">
             <div
               className={`flex h-9 w-9 items-center justify-center rounded-lg transition-colors ${
                 scrolled
@@ -58,20 +74,35 @@ export default function MalerSchneiderNavbar() {
             >
               Malerbetrieb Schneider
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-emerald-600 ${
-                  scrolled ? "text-gray-700" : "text-white/90 hover:text-white"
+                className={`text-sm font-medium transition-colors ${
+                  link.highlight
+                    ? isActive(link.href)
+                      ? "text-emerald-600"
+                      : scrolled
+                        ? "text-emerald-600 hover:text-emerald-700"
+                        : "text-emerald-300 hover:text-white"
+                    : isActive(link.href)
+                      ? scrolled
+                        ? "text-emerald-600"
+                        : "text-white font-semibold"
+                      : scrolled
+                        ? "text-gray-700 hover:text-emerald-600"
+                        : "text-white/90 hover:text-white"
                 }`}
               >
+                {link.highlight && (
+                  <Palette className="inline h-3.5 w-3.5 mr-1 -mt-0.5" />
+                )}
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -97,7 +128,11 @@ export default function MalerSchneiderNavbar() {
                   : "text-white hover:bg-white/10"
               }`}
             >
-              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -108,14 +143,20 @@ export default function MalerSchneiderNavbar() {
         <div className="md:hidden bg-white border-t shadow-lg">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+                className={`block px-4 py-3 font-medium rounded-lg transition-colors ${
+                  isActive(link.href)
+                    ? "bg-emerald-50 text-emerald-700"
+                    : "text-gray-700 hover:bg-gray-50"
+                }`}
               >
+                {link.highlight && (
+                  <Palette className="inline h-4 w-4 mr-1.5 text-emerald-600" />
+                )}
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
               href="tel:+4906471123456"
