@@ -29,7 +29,6 @@ import {
   QrCode,
   Nfc,
   Mail,
-  Share2,
   Gift,
   type LucideIcon,
 } from "lucide-react";
@@ -246,11 +245,6 @@ export default function Packages() {
               icon: Mail,
               title: "Professionelle E-Mail-Signatur",
               text: "HTML-Signatur im Website-Design mit Logo, Kontaktdaten und \u201ETermin buchen\u201C-Button.",
-            },
-            {
-              icon: Share2,
-              title: "Social-Media-Vorlagen",
-              text: "5–10 gebrandete Canva-Templates für Instagram & Facebook – Foto rein, posten, fertig.",
             },
             {
               icon: FileText,
