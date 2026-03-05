@@ -34,7 +34,7 @@ export default function ImpressumPage() {
           <div>
             <h2 className="text-lg font-semibold text-secondary">Kontakt</h2>
             <p>
-              Telefon: +49 176 56121811<br />
+              Telefon: +49 176 56 12 18 11<br />
               E-Mail: info@craftbridge.de
             </p>
           </div>
